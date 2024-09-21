@@ -1,0 +1,76 @@
+ /* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+}
+
+#feed {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .post {
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+/* Swipe gesture styling */
+.swipe-container {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.swipe-container .post {
+    flex: none;
+    width: 100%;
+    scroll-snap-align: center;
+}
